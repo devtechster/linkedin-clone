@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-linkedin-border;
+  }
+  
+  body {
+    @apply font-sans bg-linkedin-bg-light text-linkedin-gray-dark;
+  }
+  
+  input, textarea {
+    @apply focus:outline-none focus:ring-2 focus:ring-linkedin-blue focus:border-transparent;
+  }
+  
+  button {
+    @apply transition-all duration-200 ease-in-out;
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-linkedin-blue text-white px-4 py-2 rounded-full font-medium hover:bg-linkedin-blue-dark active:scale-95 transition-all duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-linkedin-blue border border-linkedin-blue px-4 py-2 rounded-full font-medium hover:bg-linkedin-blue hover:text-white active:scale-95 transition-all duration-200;
+  }
+  
+  .btn-ghost {
+    @apply text-linkedin-gray hover:bg-gray-100 px-3 py-2 rounded-lg font-medium transition-all duration-200;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg border border-linkedin-border shadow-sm;
+  }
+  
+  .input-field {
+    @apply w-full px-3 py-2 border border-linkedin-border rounded-lg bg-white text-linkedin-gray-dark placeholder-linkedin-gray-light;
+  }
+}
